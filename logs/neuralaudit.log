@@ -1,0 +1,45 @@
+2026-04-25 14:56:35 - NeuralAudit - INFO - Initializing NeuralAudit pipeline with device: cpu
+2026-04-25 14:56:35 - NeuralAudit - ERROR - Error loading model from ./models/resnet18_colors.pth: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:56:35 - NeuralAudit - WARNING - Model checkpoint not found. Using pre-trained model only: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:56:35 - NeuralAudit - ERROR - Failed to initialize model: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1032)>
+2026-04-25 14:56:58 - NeuralAudit - INFO - Initializing NeuralAudit pipeline with device: cpu
+2026-04-25 14:56:58 - NeuralAudit - ERROR - Error loading model from ./models/resnet18_colors.pth: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:56:58 - NeuralAudit - WARNING - Model checkpoint not found. Using pre-trained model only: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:57:14 - NeuralAudit - INFO - Initialized ColorClassificationModel with 10 classes
+2026-04-25 14:57:14 - NeuralAudit - INFO - Initialized fresh model on device: cpu
+2026-04-25 14:57:14 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 14:57:14 - NeuralAudit - INFO - Pipeline initialized successfully
+2026-04-25 14:57:14 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 14:57:37 - NeuralAudit - INFO - Starting FastAPI server...
+2026-04-25 14:57:37 - NeuralAudit - INFO - Initializing NeuralAudit pipeline with device: cpu
+2026-04-25 14:57:37 - NeuralAudit - ERROR - Error loading model from ./models/resnet18_colors.pth: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:57:37 - NeuralAudit - WARNING - Model checkpoint not found. Using pre-trained model only: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 14:57:37 - NeuralAudit - INFO - Initialized ColorClassificationModel with 10 classes
+2026-04-25 14:57:37 - NeuralAudit - INFO - Initialized fresh model on device: cpu
+2026-04-25 14:57:37 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 14:57:37 - NeuralAudit - INFO - Pipeline initialized successfully
+2026-04-25 14:57:37 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 14:57:37 - NeuralAudit - INFO - Starting API server on 0.0.0.0:8000
+2026-04-25 14:58:50 - NeuralAudit - INFO - Health check requested
+2026-04-25 15:06:00 - NeuralAudit - INFO - Starting FastAPI server...
+2026-04-25 15:06:00 - NeuralAudit - INFO - Initializing NeuralAudit pipeline with device: cpu
+2026-04-25 15:06:00 - NeuralAudit - ERROR - Error loading model from ./models/resnet18_colors.pth: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 15:06:00 - NeuralAudit - WARNING - Model checkpoint not found. Using pre-trained model only: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 15:06:00 - NeuralAudit - INFO - Initialized ColorClassificationModel with 10 classes
+2026-04-25 15:06:00 - NeuralAudit - INFO - Initialized fresh model on device: cpu
+2026-04-25 15:06:00 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 15:06:00 - NeuralAudit - INFO - Pipeline initialized successfully
+2026-04-25 15:06:00 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 15:06:00 - NeuralAudit - INFO - Starting API server on 0.0.0.0:8000
+2026-04-25 15:07:31 - NeuralAudit - INFO - Health check requested
+2026-04-25 15:07:48 - NeuralAudit - WARNING - Database connection not available
+2026-04-25 15:22:40 - NeuralAudit - INFO - Starting FastAPI server...
+2026-04-25 15:22:40 - NeuralAudit - INFO - Initializing NeuralAudit pipeline with device: cpu
+2026-04-25 15:22:40 - NeuralAudit - ERROR - Error loading model from ./models/resnet18_colors.pth: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 15:22:40 - NeuralAudit - WARNING - Model checkpoint not found. Using pre-trained model only: Model checkpoint not found at ./models/resnet18_colors.pth
+2026-04-25 15:22:40 - NeuralAudit - INFO - Initialized ColorClassificationModel with 10 classes
+2026-04-25 15:22:40 - NeuralAudit - INFO - Initialized fresh model on device: cpu
+2026-04-25 15:22:40 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 15:22:40 - NeuralAudit - INFO - Pipeline initialized successfully
+2026-04-25 15:22:40 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
+2026-04-25 15:22:40 - NeuralAudit - INFO - Starting API server on 0.0.0.0:8000
