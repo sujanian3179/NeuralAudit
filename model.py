@@ -1,21 +1,49 @@
 """
 Deep Learning Model Module
 ResNet-18 based CNN for color family classification
+
+KEY COMPONENTS:
+1. ColorClassificationModel: Transfer learning architecture
+   - Pre-trained ResNet-18 backbone (from ImageNet)
+   - Custom classification head (for 10 color families)
+   - Handles feature extraction + color classification
+   
+2. ModelInference: Inference engine wrapper
+   - Loads model from checkpoint or initializes fresh
+   - Provides predict(), predict_batch() methods
+   - Handles GPU/CPU device management
+   - Manages model state and checkpoint saving
 """
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import torchvision.models as models
-from typing import Tuple
-import os
-from logger import logger
-from config import MODEL_NAME, NUM_CLASSES, MODEL_CHECKPOINT, DEVICE
+import torch  # Deep learning framework
+import torch.nn as nn  # Neural network modules
+import torch.nn.functional as F  # Activation functions
+import torchvision.models as models  # Pre-trained models (ResNet, VGG, etc.)
+from typing import Tuple  # Type hints
+import os  # Operating system operations
+from logger import logger  # Custom logging
+from config import MODEL_NAME, NUM_CLASSES, MODEL_CHECKPOINT, DEVICE  # Config variables
 
 
 class ColorClassificationModel(nn.Module):
     """
     ResNet-18 based model for color family classification.
-    Transfer learning approach: pre-trained ResNet backbone + custom classification head.
+    
+    Architecture:
+    - Backbone: ResNet-18 (pre-trained on ImageNet)
+      * Extracts visual features from image
+      * 18 layers of convolutions + residual connections
+      * Output: 512-dimensional feature vector
+    
+    - Classification Head: Custom FC layers
+      * Takes 512-dim features from backbone
+      * 512 → 256 (ReLU activation)
+      * Dropout (0.5) for regularization
+      * 256 → 10 (output logits for 10 color classes)
+    
+    Transfer Learning:
+    - Backbone weights frozen (trained on ImageNet)
+    - Only FC head trained on color images
+    - Requires ~1000 color images vs 100,000+ from scratch
     """
     
     def __init__(self, num_classes: int = NUM_CLASSES):
@@ -24,22 +52,37 @@ class ColorClassificationModel(nn.Module):
         
         Args:
             num_classes: Number of color classes (default 10)
+                        Red, Blue, Green, Yellow, Orange, Purple, Pink, Gray, Black, White
         """
+        # Call parent class constructor
         super(ColorClassificationModel, self).__init__()
         
-        # Handle SSL certificate issues
+        # Handle SSL certificate issues (for downloading pre-trained weights)
         import ssl
         ssl._create_default_https_context = ssl._create_unverified_context
         
-        # Load pre-trained ResNet-18
+        # Load pre-trained ResNet-18 from PyTorch model zoo
+        # weights=ResNet18_Weights.DEFAULT uses ImageNet pre-trained weights
+        # This gives us 512-dim feature extraction for free!
         self.backbone = models.resnet18(weights=models.ResNet18_Weights.DEFAULT)
         
-        # Replace final classification layer
-        in_features = self.backbone.fc.in_features
+        # Get number of input features to final FC layer (512 for ResNet-18)
+        in_features = self.backbone.fc.in_features  # 512
+        
+        # REPLACE the original classification layer (1000 ImageNet classes)
+        # with our custom head for 10 color families
+        # Architecture: 512 → 256 → 10
         self.backbone.fc = nn.Sequential(
-            nn.Linear(in_features, 256),
+            # First fully connected layer: 512 dimensions → 256 dimensions
+            nn.Linear(in_features, 256),  # Reduces dimensionality
+            # ReLU activation: Introduces non-linearity (essential for learning)
+            # inplace=True means modify tensor in-place (saves memory)
             nn.ReLU(inplace=True),
+            # Dropout regularization: Randomly zeros 50% of activations during training
+            # Prevents overfitting when training data is limited (~1000 images)
             nn.Dropout(0.5),
+            # Final fully connected layer: 256 dimensions → 10 output logits
+            # Each output corresponds to probability of one color class
             nn.Linear(256, num_classes)
         )
         
@@ -49,12 +92,27 @@ class ColorClassificationModel(nn.Module):
         """
         Forward pass through the model.
         
+        Process:
+        1. Input image (224x224x3)
+        2. ResNet backbone extracts 512-dim features
+        3. Custom FC head maps 512 dims → 256 dims (with ReLU + Dropout)
+        4. Output layer maps 256 dims → 10 logits (one per color class)
+        5. Return logits (NOT probabilities - done with softmax in inference)
+        
         Args:
             x: Input tensor of shape (batch_size, 3, 224, 224)
+               Where: batch_size = number of images
+                      3 = RGB channels
+                      224x224 = image resolution (ResNet-18 standard input)
         
         Returns:
-            Logits of shape (batch_size, num_classes)
+            Logits tensor of shape (batch_size, num_classes=10)
+            Each value represents raw score for that color class
+            Higher logit = model thinks this color is more likely
         """
+        # Pass image through backbone (ResNet-18)
+        # This includes: convolutions, residual connections, pooling
+        # Output: (batch_size, 512) feature tensor
         return self.backbone(x)
 
 

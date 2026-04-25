@@ -43,3 +43,22 @@
 2026-04-25 15:22:40 - NeuralAudit - INFO - Pipeline initialized successfully
 2026-04-25 15:22:40 - NeuralAudit - WARNING - Supabase credentials not configured. Database disabled.
 2026-04-25 15:22:40 - NeuralAudit - INFO - Starting API server on 0.0.0.0:8000
+2026-04-25 15:59:13 - NeuralAudit - INFO - Selenium WebDriver initialized successfully
+2026-04-25 15:59:13 - NeuralAudit - INFO - Loading product page: https://www.amazon.in/s?k=water+bottle+1+ltr&crid=2FUZWK8JY2VVM&sprefix=water+bottle%2Caps%2C428&ref=nb_sb_ss_mvt-t11-ranker_1_12
+2026-04-25 15:59:56 - NeuralAudit - INFO - WebDriver closed successfully
+2026-04-25 16:00:35 - NeuralAudit - INFO - Selenium WebDriver initialized successfully
+2026-04-25 16:00:35 - NeuralAudit - INFO - Loading product page: https://www.amazon.in/Insulated-Bottle-Stainless-Warranty-Military/dp/B0CLXVWX25/ref=sr_1_2_sspa?crid=2FUZWK8JY2VVM&dib=eyJ2IjoiMSJ9.kJ-6FlyjSF51uVJd4pRr7FZEOxfVzPnMgR8HmQhLVproQv5nODT__lh2ZmlwcDaqi6cYiYN1Mu90sWERFZnI3lsDVfhViHtR-kIW_bV3S8ivCoxgOEu3NC0P60LooV9uEsMRU_cGPF-psnt0CQmbRWhrdL3xOK3DqDC1b7_-T9RxHAxkANGX7EhXbCgq9r0Wg2OBpmOJWrXo4ikcJEPpL0Ul2NikBvzLy8IVkqkG6qQcJOYiFSD05HjdCunxsQ8G9raotHxEgfhULZPGBKNeHdhSHZb-6hDQGG4KPRbbIXA._v_DQH3vFyRE5UvL_165HiGqexBVc-AuLen6YQ7Irm0&dib_tag=se&keywords=water%2Bbottle%2B1%2Bltr&qid=1777112909&sprefix=water%2Bbottle%2Caps%2C428&sr=8-2-spons&aref=1r3IfYuycp&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1
+2026-04-25 16:01:21 - NeuralAudit - WARNING - Could not find color swatches with common selectors
+2026-04-25 16:01:21 - NeuralAudit - WARNING - No color swatches found on https://www.amazon.in/Insulated-Bottle-Stainless-Warranty-Military/dp/B0CLXVWX25/ref=sr_1_2_sspa?crid=2FUZWK8JY2VVM&dib=eyJ2IjoiMSJ9.kJ-6FlyjSF51uVJd4pRr7FZEOxfVzPnMgR8HmQhLVproQv5nODT__lh2ZmlwcDaqi6cYiYN1Mu90sWERFZnI3lsDVfhViHtR-kIW_bV3S8ivCoxgOEu3NC0P60LooV9uEsMRU_cGPF-psnt0CQmbRWhrdL3xOK3DqDC1b7_-T9RxHAxkANGX7EhXbCgq9r0Wg2OBpmOJWrXo4ikcJEPpL0Ul2NikBvzLy8IVkqkG6qQcJOYiFSD05HjdCunxsQ8G9raotHxEgfhULZPGBKNeHdhSHZb-6hDQGG4KPRbbIXA._v_DQH3vFyRE5UvL_165HiGqexBVc-AuLen6YQ7Irm0&dib_tag=se&keywords=water%2Bbottle%2B1%2Bltr&qid=1777112909&sprefix=water%2Bbottle%2Caps%2C428&sr=8-2-spons&aref=1r3IfYuycp&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1
+2026-04-25 16:01:21 - NeuralAudit - INFO - WebDriver closed successfully
+2026-04-25 21:22:56 - NeuralAudit - INFO - ✅ FastAPI application created successfully
+2026-04-25 21:23:04 - NeuralAudit - INFO - Starting FastAPI server...
+2026-04-25 21:23:04 - NeuralAudit - INFO - ✅ FastAPI application created successfully
+2026-04-25 21:23:04 - NeuralAudit - INFO - Starting API server on 0.0.0.0:8000
+2026-04-25 21:23:04 - NeuralAudit - INFO - ================================================================================
+2026-04-25 21:23:04 - NeuralAudit - INFO - 🚀 NeuralAudit API Starting
+2026-04-25 21:23:04 - NeuralAudit - INFO - 📍 Server: 0.0.0.0:8000
+2026-04-25 21:23:04 - NeuralAudit - INFO - 🔧 Debug Mode: False
+2026-04-25 21:23:04 - NeuralAudit - INFO - ================================================================================
+2026-04-25 21:23:15 - NeuralAudit - INFO - Health check requested
+2026-04-25 21:26:19 - NeuralAudit - INFO - Health check requested

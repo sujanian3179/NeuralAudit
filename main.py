@@ -202,8 +202,8 @@ def process_from_csv(csv_file: str, output_file: str, use_gpu: bool):
 
 
 def start_api():
-    """Start the FastAPI server"""
-    from api import app
+    """Start the FastAPI server using production-ready app.server module"""
+    from app.server import app
     import uvicorn
     from config import API_HOST, API_PORT
     

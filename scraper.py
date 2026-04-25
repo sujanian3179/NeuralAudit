@@ -287,8 +287,7 @@ if __name__ == "__main__":
     import os
     # Example usage
     test_urls = [
-        "https://example.com/product1",
-        "https://example.com/product2",
+        "https://www.amazon.in/Insulated-Bottle-Stainless-Warranty-Military/dp/B0CLXVWX25/ref=sr_1_2_sspa?crid=2FUZWK8JY2VVM&dib=eyJ2IjoiMSJ9.kJ-6FlyjSF51uVJd4pRr7FZEOxfVzPnMgR8HmQhLVproQv5nODT__lh2ZmlwcDaqi6cYiYN1Mu90sWERFZnI3lsDVfhViHtR-kIW_bV3S8ivCoxgOEu3NC0P60LooV9uEsMRU_cGPF-psnt0CQmbRWhrdL3xOK3DqDC1b7_-T9RxHAxkANGX7EhXbCgq9r0Wg2OBpmOJWrXo4ikcJEPpL0Ul2NikBvzLy8IVkqkG6qQcJOYiFSD05HjdCunxsQ8G9raotHxEgfhULZPGBKNeHdhSHZb-6hDQGG4KPRbbIXA._v_DQH3vFyRE5UvL_165HiGqexBVc-AuLen6YQ7Irm0&dib_tag=se&keywords=water%2Bbottle%2B1%2Bltr&qid=1777112909&sprefix=water%2Bbottle%2Caps%2C428&sr=8-2-spons&aref=1r3IfYuycp&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1"
     ]
     
     results = scrape_batch(test_urls)
